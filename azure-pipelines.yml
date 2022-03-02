@@ -15,13 +15,13 @@ steps:
 - checkout: none
 - script:
       
-      # Install urlencode function to encode reserved characters in passwords
-      #sudo apt-get install gridsite-clients
+# Install urlencode function to encode reserved characters in passwords
+#sudo apt-get install gridsite-clients
 
-      # Create local mirror of Azure DevOps repository
-      git clone https://${AZPAT}:@https://dev.azure.com/BrainvireInfo/_git/IT-Project
+# Create local mirror of Azure DevOps repository
+git clone https://${AZPAT}:@https://dev.azure.com/BrainvireInfo/_git/IT-Project
       
-      # Sync AWS CodeCommit repository
-      git remote add --mirror=fetch secondary https://$(GITPAT)@github.com/github-dotnet/it-test.git
-	    git fetch origin
-      git push secondary --all --force
+# Sync AWS CodeCommit repository
+git remote add --mirror=fetch secondary https://$(GITPAT)@github.com/github-dotnet/it-test.git
+git fetch origin
+git push secondary --all --force
