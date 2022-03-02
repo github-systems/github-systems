@@ -19,7 +19,7 @@ steps:
 #sudo apt-get install gridsite-clients
 
 # Create local mirror of Azure DevOps repository
-git clone https://$(AZPAT):@https://dev.azure.com/BrainvireInfo/_git/IT-Project
-git remote add --mirror=fetch secondary https://$(GITPAT):@github.com/github-dotnet/it-test.git
+git clone https://${AZPAT}:@https://dev.azure.com/BrainvireInfo/_git/IT-Project
+git remote add --mirror=fetch secondary https://${GITPAT}:@github.com/github-dotnet/it-test.git
 git fetch origin
 git push secondary --all --force
