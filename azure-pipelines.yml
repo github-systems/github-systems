@@ -13,7 +13,7 @@ pool:
 # Pipeline
 steps:
 - checkout: none
-- script: |
+- script:
       
       # Install urlencode function to encode reserved characters in passwords
       #sudo apt-get install gridsite-clients
